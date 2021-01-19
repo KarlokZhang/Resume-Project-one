@@ -1,6 +1,6 @@
 function createNav() {
   var previous = "";
-  var current = "SERVICES";
+  var current = "HOME";
 
   changePage();
   changeNavItem();
@@ -17,7 +17,6 @@ function createNav() {
   function push(to) {
     previous = current;
     current = to;
-
     changePage();
     changeNavItem();
   }
