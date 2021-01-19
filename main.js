@@ -1,6 +1,6 @@
 function createNav() {
   var previous = "";
-  var current = "RESUME";
+  var current = "SERVICES";
 
   changePage();
   changeNavItem();
