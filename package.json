@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --mode development"
+    "build": "webpack --config ./webpack.config.js --mode development",
+    "start:dev": "webpack serve --config ./webpack.config.js --mode development"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "webpack": "^5.16.0"
   },
   "devDependencies": {
-    "webpack-cli": "^4.4.0"
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
