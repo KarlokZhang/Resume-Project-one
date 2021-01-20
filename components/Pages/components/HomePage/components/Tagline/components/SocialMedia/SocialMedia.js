@@ -1,7 +1,9 @@
-import "./SocialMedia.css";
+import './SocialMedia.css';
 
 // 按复用拆分 Component
-const SocialMedia = ({ iconName }) => (
+const SocialMedia = ({
+  iconName,
+}) => (
   <i className={`fab fa-${iconName} homepage__socialMediaItem`}></i>
 );
 

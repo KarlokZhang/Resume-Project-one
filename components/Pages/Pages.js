@@ -1,20 +1,16 @@
-const Page = ({ active, title, header, children }) => {
-  // TODO:
-  let className = "page";
+import HomePage from './components/HomePage/HomePage';
+import ResumePage from './components/ResumePage/ResumePage';
+import ServicesPage from './components/ServicesPage/ServicesPage';
+import './Pages.css';
 
-  if (active) {
-    className += " page--active";
-  }
+const Pages = () => (
+  <div className="pages">
+    <HomePage />
+    <ResumePage active />
+    <ServicesPage />
+    <div id="BLOG" className="page"></div>
+    <div id="CONTACT" className="page"></div>
+  </div>
+);
 
-  return (
-    <div className={className}>
-      <div className="page__header">
-        {/* {header ? header : (<h2 className="page__title">{title}</h2>)} */}
-        {header}
-      </div>
-      <div className="page__content">{children}</div>
-    </div>
-  );
-};
-
-export default Page;
+export default Pages;

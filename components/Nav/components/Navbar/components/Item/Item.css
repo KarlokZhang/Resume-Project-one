@@ -9,7 +9,7 @@
 }
 
 .navbar__item::after {
-  content: "";
+  content: "";  
   width: 0;
   border-bottom: 3px solid #377e9a;
   margin: auto;

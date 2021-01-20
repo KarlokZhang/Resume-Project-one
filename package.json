@@ -1,0 +1,34 @@
+{
+  "name": "my-project-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlokCheung/Resume-Project-one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlokCheung/Resume-Project-one/issues"
+  },
+  "homepage": "https://github.com/KarlokCheung/Resume-Project-one#readme",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.16.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.4.0"
+  }
+}

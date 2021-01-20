@@ -1,5 +1,5 @@
-import SocialMedia from "./components/SocialMedia/SocialMedia";
-import "./Tagline.css";
+import SocialMedia from './components/SocialMedia/SocialMedia';
+import './Tagline.css';
 
 const Tagline = () => (
   <div className="homepage__title">

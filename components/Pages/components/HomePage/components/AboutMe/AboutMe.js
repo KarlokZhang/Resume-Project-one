@@ -1,4 +1,4 @@
-import "./AboutMe.css";
+import './AboutMe.css';
 
 const AboutMe = () => (
   <div>
@@ -7,9 +7,7 @@ const AboutMe = () => (
       <span className="homepage__aboutMeHeaderHighlight">Me</span>
     </h3>
     <div className="homepage__aboutMeContent">
-      Bright and optimistic, Tifa always cheers up the others when they're down.
-      But don't let her looks fool you, she can decimate almost any enemy with
-      her fists...
+      Bright and optimistic, Tifa always cheers up the others when they're down. But don't let her looks fool you, she can decimate almost any enemy with her fists...
     </div>
   </div>
 );
