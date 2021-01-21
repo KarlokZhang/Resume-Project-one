@@ -6,25 +6,28 @@ const Education = () => (
     <Timeline
       items={[
         {
-          key: "KEY",
-          title: "TITLE",
+          key: "KEY0",
+          title: "Monash University",
           year: "2020",
-          company: "Apple Inc",
-          description: "DESCRIPTION",
+          company: "Monash University",
+          description:
+            "Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.",
         },
         {
-          key: "KEY",
-          title: "TITLE",
+          key: "KEY1",
+          title: "Monash University",
           year: "2020",
-          company: "Apple Inc",
-          description: "DESCRIPTION",
+          company: "Monash University",
+          description:
+            "Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.",
         },
         {
-          key: "KEY",
-          title: "TITLE",
+          key: "KEY2",
+          title: "Apple",
           year: "2020",
           company: "Apple Inc",
-          description: "DESCRIPTION",
+          description:
+            "Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.",
         },
       ]}
     />

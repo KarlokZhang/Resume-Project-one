@@ -1,12 +1,15 @@
 import Nav from "../Nav/Nav";
 import Pages from "../Pages/Pages";
+import { PAGE } from "../../constants";
 import "./App.css";
+
+const currentPage = PAGE.HOME;
 
 const App = () => (
   <div className="app">
     <div className="container">
-      <Nav />
-      <Pages />
+      <Nav currentPage={currentPage} />
+      <Pages currentPage={currentPage} />
     </div>
   </div>
 );
