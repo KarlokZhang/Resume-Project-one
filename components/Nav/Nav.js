@@ -5,13 +5,13 @@ import Logo from "./components/Logo/Logo";
 import Navbar from "./components/Navbar/Navbar";
 import "./Nav.css";
 
-const Nav = ({ currentPage }) => (
+const Nav = ({ currentPage, obj, render }) => (
   <header className="nav">
     <div className="nav__left">
       <Logo />
     </div>
     <div className="nav__right">
-      <Navbar currentPage={currentPage} />
+      <Navbar currentPage={currentPage} obj={obj} render={render} />
     </div>
   </header>
 );

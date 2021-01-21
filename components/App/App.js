@@ -3,13 +3,15 @@ import Pages from "../Pages/Pages";
 import { PAGE } from "../../constants";
 import "./App.css";
 
-const currentPage = PAGE.HOME;
+const obj = {
+  currentPage: PAGE.HOME,
+};
 
-const App = () => (
+const App = ({ render }) => (
   <div className="app">
     <div className="container">
-      <Nav currentPage={currentPage} />
-      <Pages currentPage={currentPage} />
+      <Nav currentPage={obj.currentPage} obj={obj} render={render} />
+      <Pages currentPage={obj.currentPage} />
     </div>
   </div>
 );

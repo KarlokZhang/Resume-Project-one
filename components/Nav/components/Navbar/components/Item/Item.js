@@ -29,7 +29,10 @@ import "./Item.css";
 const Item = ({
   active,
   href,
-  children, // jsx 保留字段
+  children,
+  pageName,
+  obj,
+  render, // jsx 保留字段
 }) => {
   let className = "navbar__item";
 
@@ -37,8 +40,16 @@ const Item = ({
     className += " navbar__item--active";
   }
 
+  const onClick = (event) => {
+    event.preventDefault();
+
+    obj.currentPage = pageName;
+    console.log("Clicked", pageName);
+    render();
+  };
+
   return (
-    <a className={className} href={href}>
+    <a onClick={onClick} className={className} href={href}>
       {children}
     </a>
   );

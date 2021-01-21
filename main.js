@@ -1,4 +1,7 @@
 import App from "./components/App/App";
 import "./style.css";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+const render = () =>
+  ReactDOM.render(<App render={render} />, document.querySelector("#root"));
+
+render();
