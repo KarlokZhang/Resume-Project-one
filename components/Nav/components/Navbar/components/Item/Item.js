@@ -31,8 +31,7 @@ const Item = ({
   href,
   children,
   pageName,
-  obj,
-  render, // jsx 保留字段
+  changePage, // jsx 保留字段
 }) => {
   let className = "navbar__item";
 
@@ -43,9 +42,7 @@ const Item = ({
   const onClick = (event) => {
     event.preventDefault();
 
-    obj.currentPage = pageName;
-    console.log("Clicked", pageName);
-    render();
+    changePage(pageName);
   };
 
   return (

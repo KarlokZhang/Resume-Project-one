@@ -7,14 +7,21 @@ const obj = {
   currentPage: PAGE.HOME,
 };
 
-const App = ({ render }) => (
-  <div className="app">
-    <div className="container">
-      <Nav currentPage={obj.currentPage} obj={obj} render={render} />
-      <Pages currentPage={obj.currentPage} />
+const App = ({ render }) => {
+  const changePage = (pageName) => {
+    obj.currentPage = pageName;
+    render();
+  };
+
+  return (
+    <div className="app">
+      <div className="container">
+        <Nav currentPage={obj.currentPage} changePage={changePage} />
+        <Pages currentPage={obj.currentPage} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default App;
 
