@@ -1,14 +1,9 @@
-const Page = ({
-  active,
-  title,
-  header,
-  children,
-}) => {
+const Page = ({ active, title, header, children }) => {
   // TODO:
-  let className = 'page';
+  let className = "page";
 
   if (active) {
-    className += ' page--active';
+    className += " page--active";
   }
 
   return (
@@ -17,11 +12,9 @@ const Page = ({
         {/* {header ? header : (<h2 className="page__title">{title}</h2>)} */}
         {header}
       </div>
-      <div className="page__content">
-        {children}
-      </div>
+      <div className="page__content">{children}</div>
     </div>
   );
-}
+};
 
 export default Page;
