@@ -3,32 +3,31 @@ import Pages from "../Pages/Pages";
 import { PAGE } from "../../constants";
 import "./App.css";
 
-const obj = {
-  currentPage: PAGE.HOME,
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-const App = ({ render }) => {
-  const changePage = (pageName) => {
-    obj.currentPage = pageName;
-    render();
-  };
+    this.state = {
+      currentPage: PAGE.HOME,
+    };
+  }
 
-  return (
-    <div className="app">
-      <div className="container">
-        <Nav currentPage={obj.currentPage} changePage={changePage} />
-        <Pages currentPage={obj.currentPage} />
+  render() {
+    const { currentPage } = this.state;
+
+    const changePage = (pageName) => {
+      this.setState({ currentPage: pageName });
+    };
+
+    return (
+      <div className="app">
+        <div className="container">
+          <Nav currentPage={currentPage} changePage={changePage} />
+          <Pages currentPage={currentPage} />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default App;
-
-// =>
-
-// 为什么有 jsx 的地方，就一定需要有 React?
-// React.createElement('div', { className: 'main' }, [
-//   React.createElement('div', { className: 'container' }),
-//   // ...
-// ]);
