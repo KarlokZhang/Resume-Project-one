@@ -4,29 +4,28 @@ import "./Navbar.css";
 
 const Navbar = ({ currentPage, changePage }) => (
   <div className="navbar">
-    {/* { href: 'HOME', children: 'Home' } */}
-    <Item
-      active={currentPage === PAGE.HOME}
-      pageName={PAGE.HOME}
-      onClick={() => changePage(PAGE.HOME)}
-    >
-      Home
-    </Item>
-    {/* React.createElement */}
-    <Item
-      active={currentPage === PAGE.RESUME}
-      pageName={PAGE.RESUME}
-      onClick={() => changePage(PAGE.RESUME)}
-    >
-      Resume
-    </Item>
-    <Item
-      active={currentPage === PAGE.SERVICES}
-      pageName={PAGE.SERVICES}
-      onClick={() => changePage(PAGE.SERVICES)}
-    >
-      Services
-    </Item>
+    {[
+      {
+        key: PAGE.HOME,
+        text: "Home",
+      },
+      {
+        key: PAGE.RESUME,
+        text: "Resume",
+      },
+      {
+        key: PAGE.SERVICES,
+        text: "Services",
+      },
+    ].map((item) => (
+      <Item
+        key={item.key}
+        active={currentPage === item.key}
+        onClick={() => changePage(item.key)}
+      >
+        {item.text}
+      </Item>
+    ))}
   </div>
 );
 
