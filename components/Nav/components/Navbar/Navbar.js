@@ -8,25 +8,25 @@ const Navbar = ({ currentPage, changePage }) => (
     <Item
       active={currentPage === PAGE.HOME}
       pageName={PAGE.HOME}
-      changePage={changePage}
-      href="HOME"
-      children="Home"
-    ></Item>
+      onClick={() => changePage(PAGE.HOME)}
+    >
+      Home
+    </Item>
     {/* React.createElement */}
     <Item
       active={currentPage === PAGE.RESUME}
       pageName={PAGE.RESUME}
-      changePage={changePage}
-      href="RESUME"
-      children="Resume"
-    />
+      onClick={() => changePage(PAGE.RESUME)}
+    >
+      Resume
+    </Item>
     <Item
       active={currentPage === PAGE.SERVICES}
       pageName={PAGE.SERVICES}
-      changePage={changePage}
-      href="SERVICES"
-      children="Services"
-    />
+      onClick={() => changePage(PAGE.SERVICES)}
+    >
+      Services
+    </Item>
   </div>
 );
 
